@@ -15,10 +15,11 @@ const forecast = (latitude, longitude, callback) => {
         weather_descriptions: description,
         temperature,
         precip,
+        visibility,
       } = response.body.current;
       callback(
         undefined,
-        `${description[0]}. It is currently ${temperature} degrees out. There is a ${precip} % chance of rain`
+        `${description[0]}. It is currently ${temperature} degrees out. There is a ${precip} % chance of rain. Visibility is ${visibility}`
       );
     }
   });
